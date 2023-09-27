@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* body style */
+  body {
+    font-family: sans-serif;
+    box-sizing: border-box;
+    background: url('../images/meal_images.jpg');
+    background-size: 100%;
+  }
+  
+  /* Header */
+  .header-container {
+    background: burlywood;
+  }
+
+  .header-container .nav-link {
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+    position: absolute;
+    right: 20px;
+    top: 30px;
+  }
+  
+  .header-container .nav-link li {
+    list-style: none;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  /* Navbar */
+  .nav-container {
+    display: flex;
+  }
+  
+  .nav-container .heading {
+    position: absolute;
+    left: 100px;
+    top: 30px;
+    background: burlywood;
+  }
+  
+  .nav-container .meal-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 100px;
+    padding: 5px;
+  }
+  
+  .nav-link li a {
+    text-decoration: none;
+    color: black;
+  }
+
+  /* meal description style  */
+  .meal-receipe-popup-container {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+  }
+  
+  .meal-receipe-popup{
+    width: clamp(200px, 92vw, 900px);
+    max-height: 90vh;
+    box-shadow: 0 0 0.5rem rgba(255, 255, 255, 0.3);
+    background-color: #302222;
+    color: #fff9f9;
+    padding: 4rem 2rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .meal-receipe-popup-inside {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .meal-receipe-popup i {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: auto;
+    background-color: transparent;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .meal-receipe-popup .left i {
+    display: none;
+  }
+  
+  .ingredients {
+    overflow-y: scroll;
+    max-height: 25vh;
+    padding-left: 1rem;
+    padding-bottom: 4rem;
+  }
+
+  /* meal details section style */
+  .right {
+    overflow-y: scroll;
+    max-height: 85vh;
+    padding-right: 1rem;
+    padding-bottom: 4rem;
+  }
+  
+  .right div {
+    margin-bottom: 2rem;
+  }
+  
+  .left ul li {
+    padding-left: 2rem;
+    list-style-position: inside;
+  }
+  
+  .right .meal-instructions,
+  .left ul {
+    margin-top: 0.5rem;
+  }
+
+  /* meal available while search style */
+  .meal {
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .meal-card {
+    width: clamp(300px, 60vw, 400px);
+    box-shadow: 0 0 0.4rem rgba(255, 255, 255, 0.3);
+    border-radius: 1rem;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    border: 1px solid rgb(56, 48, 48);
+  }
+  
+  .meal-card-img-container {
+    width: 100%;
+    height: 200px;
+    cursor: pointer;
+  }
+  
+  .meal-card-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .meal-name {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    font-size: 1.7rem;
+    font-weight: 700;
+    text-shadow: 0 0 0.3rem rgba(255, 255, 255, 0.3);
+    transition: 200ms ease-in-out color, 200ms ease-in-out text-shadow;
+    background-color: #503939;
+  }
+  
+  .meal-name p {
+    color: rgb(243, 237, 237);
+  }
+  
+  .meal-name i {
+    color: #f50707;
+    text-shadow: 0 0 0.5rem black;
+    cursor: pointer;
+  }
+  
+  .meal-card:hover .meal-name {
+    text-shadow: 0 0 0.3rem rgb(12, 11, 11);
+  }
+  
+  /* favourite meal style defined in favourites.html */
+  .favourite-meal-container {
+    text-align: center;
+    color: var(--secondary-clr);
+    box-shadow: 0 0 0.3rem var(--secondary-rgba-3);
+    padding: 1rem;
+  }
+ 
+
+.favourite-meal {
+  display: flex;
+  margin-top: 80px;
+  align-items: center;
+  column-gap: 0.7rem;
+  width: auto;
+  overflow-x: auto;
+  padding: 0.5rem;
+  padding-bottom: 1rem;
+}
+
+/* style of favourite heading  */
+.favourite-meal-container h1 {
+  font-weight: 900;
+  text-shadow: 0 0 0.5rem black;
+  margin-bottom: 1rem;
+  margin-top: 50px;
+  font-size: 40px;
+  color: rgb(219, 241, 13);
+}
+
